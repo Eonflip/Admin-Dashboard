@@ -1,0 +1,28 @@
+header {
+    display: grid;
+    background-color: lightblue;
+}
+
+
+.bar {
+    border-radius: 20px;
+    width: 20%;
+}
+
+
+button {
+    background-color: lightblue;
+}
+
+
+#user-image-small {
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+#user-image-large {
+    border-radius: 100px;
+    height: 120px;
+    width: 120px;
+}
