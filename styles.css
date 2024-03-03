@@ -4,8 +4,8 @@ body {
     "sidebar header header header header"
     "sidebar main main main main"
     "sidebar main main main main"
-    "sidebar announcements announcements announcements announcements"
-    "sidebar trending trending trending trending";
+    "sidebar main main main main"
+    "sidebar main main main main";
     grid-template-columns: 240px auto; /* Adjust the ratio as needed */
     grid-template-rows: auto 1fr 1fr auto auto; /* Adjust the ratio as needed */
     gap: 0px; /* Space between grid items */
@@ -30,34 +30,61 @@ header {
     grid-area: header;
     display: grid;
     background-color: lightblue;
+    grid-template-areas: 
+    "search-bar search-bar search-bar search-bar user-info user-info"
+    "user-hello-container user-hello-container user-hello-container user-hello-container post-buttons post-buttons";
+    padding: 10px;
 }
 
 
+
 .search-bar {
-    grid-area: 1 / 1 / 2 / 4;
+    grid-area: search-bar;
     display: flex; 
     align-items: center;
     gap: 10px;
 }
 
 .user-info {
-    grid-area: 1 / 4 / 2 / 6;
+    grid-area: user-info;
     display: flex; 
     align-items: center;
+    justify-content: space-evenly;
     gap: 10px;
 }
 
-.user-hello {
+.user-hello-container {
+    grid-area: user-hello-container;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
+.user-hello {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+}
+
+.user-hello p, 
+.user-hello h3 {
+    margin: 0; /* Removes the default margin */
+    padding: 0; /* Ensures there is no padding adding extra space */
+}
+
+.user-hello p {
+    margin-bottom: 5px;
 }
 
 .post-buttons {
-
+    grid-area: post-buttons;
 }
 
 .bar {
     border-radius: 20px;
-    width: 100%;
+    width: 70%;
     padding: 5px 10px;
 }
 
@@ -69,12 +96,12 @@ button {
 
 #user-image-small {
     border-radius: 50px;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
 }
 
 #user-image-large {
     border-radius: 100px;
-    height: 120px;
-    width: 120px;
+    height: 70px;
+    width: 70px;
 }
