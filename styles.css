@@ -1,12 +1,64 @@
+body {
+    display: grid;
+    grid-template-areas:
+    "sidebar header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar announcements announcements announcements announcements"
+    "sidebar trending trending trending trending";
+    grid-template-columns: 240px auto; /* Adjust the ratio as needed */
+    grid-template-rows: auto 1fr 1fr auto auto; /* Adjust the ratio as needed */
+    gap: 0px; /* Space between grid items */
+    height: 100vh; /* Full height of the viewport */
+    font-family: 'Arial', sans-serif; /* Use your preferred font */
+    margin: 0;
+}
+
+.sidebar {
+    background-color: palevioletred;
+    grid-area: sidebar; /* row-start, column-start, row-end, column-end */
+}
+
+
+.project-grid {
+    background-color: black;
+    grid-area: main;
+}
+
+
 header {
+    grid-area: header;
     display: grid;
     background-color: lightblue;
 }
 
 
+.search-bar {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info {
+    grid-area: 1 / 4 / 2 / 6;
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.user-hello {
+
+}
+
+.post-buttons {
+
+}
+
 .bar {
     border-radius: 20px;
-    width: 20%;
+    width: 100%;
+    padding: 5px 10px;
 }
 
 
