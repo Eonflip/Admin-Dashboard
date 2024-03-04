@@ -33,7 +33,11 @@ header {
     grid-template-areas: 
     "search-bar search-bar search-bar search-bar user-info user-info"
     "user-hello-container user-hello-container user-hello-container user-hello-container post-buttons post-buttons";
-    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 
@@ -49,8 +53,10 @@ header {
     grid-area: user-info;
     display: flex; 
     align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: end;
+    gap: 30px;
+    padding-right: 60px;
+    font-weight: bold;
 }
 
 .user-hello-container {
@@ -80,17 +86,28 @@ header {
 
 .post-buttons {
     grid-area: post-buttons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .bar {
     border-radius: 20px;
     width: 70%;
     padding: 5px 10px;
+    border: hidden;
+    background-color: lightgray;
 }
 
 
 button {
-    background-color: lightblue;
+    background-color: lightyellow;
+    border-radius: 25px;
+    width: 25%;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
 }
 
 
