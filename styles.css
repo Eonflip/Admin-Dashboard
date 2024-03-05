@@ -15,7 +15,7 @@ body {
 }
 
 .sidebar {
-    background-color: palevioletred;
+    background-color: rgb(215, 162, 201);
     grid-area: sidebar; /* row-start, column-start, row-end, column-end */
 }
 
@@ -23,6 +23,14 @@ body {
 .project-grid {
     background-color: lightgrey;
     grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 16px;
+    padding: 16px;
+    grid-template-areas:
+    "your-projects announcements"
+    "your-projects trending"
 }
 
 
@@ -98,7 +106,7 @@ header {
     width: 70%;
     padding: 5px 10px;
     border: hidden;
-    background-color: lightgray;
+    background-color: white;
 }
 
 
@@ -140,7 +148,34 @@ button {
 .sidebar-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     padding: 0px 5px 0px 5px;
     font-weight: bold;
+}
+
+
+.projects {
+    grid-area: your-projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 8px;
+    padding: 8px; 
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending
+}
+
+.project-tile {
+    border: 2px solid blue;
+    padding: 8px;
+    box-sizing: border-box;
+    max-width: 70%;
+    min-width: 0;
+    overflow: auto;
+    margin: 0;
 }
