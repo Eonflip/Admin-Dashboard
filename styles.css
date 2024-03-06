@@ -6,7 +6,7 @@ body {
     "sidebar main main main main"
     "sidebar main main main main"
     "sidebar main main main main";
-    grid-template-columns: 240px auto; /* Adjust the ratio as needed */
+    grid-template-columns: 280px auto; /* Adjust the ratio as needed */
     grid-template-rows: auto 1fr 1fr auto auto; /* Adjust the ratio as needed */
     gap: 0px; /* Space between grid items */
     height: 100vh; /* Full height of the viewport */
@@ -145,7 +145,8 @@ button {
     grid-area: main;
     display: grid;
     gap: 8px;
-    padding: 8px;
+    padding: 10px;
+    padding-right: 50px;
     grid-template-areas:
     "projects announcements"
     "projects trending";
@@ -164,15 +165,56 @@ button {
     grid-area: announcements;
 }
 
+.announcement-posts {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement-box {
+    padding: 15px;
+    width: 70%
+}
+
+.announcement-posts > .announcement-box:not(:last-child) {
+    border-bottom: 2px solid grey;
+}
+
 .trending {
     grid-area: trending;
     margin-bottom: 7px;
+    
 }
 
-.trending-box {
-    border: 2px solid blue;
+.trending-posts {
+    background-color: white;
+    border-radius: 10px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.trending-box {
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-trending {
+    line-height: 5px;
+    padding: 10px;
+    width: 200px;
+}
+
 
 .projects .tiles {
     display: grid;
@@ -182,8 +224,28 @@ button {
     padding-bottom: 2rem;
   }
 
-  .projects .project-tile  {
-    border-left: 10px solid pink;
+.projects .project-tile  {
+    border-left: 10px solid rgb(242, 242, 126);
     display: flex;
     flex-direction: column;
-  }
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px;
+}
+
+
+.project-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.action-buttons {
+    margin-top: auto;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem
+}
