@@ -145,7 +145,7 @@ button {
     grid-area: main;
     display: grid;
     gap: 8px;
-    padding: 10px;
+    padding: 5px;
     padding-right: 50px;
     grid-template-areas:
     "projects announcements"
@@ -159,6 +159,7 @@ button {
 
 .projects {
     grid-area: projects;
+    margin-left: 15px;
 }
 
 .announcements {
@@ -174,6 +175,7 @@ button {
     justify-content: center;
     align-items: center;
     max-width: 300px;
+    font-size: 12px;
 }
 
 .announcement-box {
@@ -206,7 +208,7 @@ button {
 
 
 .trending-box {
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
     margin: 0px 10px 0px 5px;
     display: flex;
     align-items: center;
